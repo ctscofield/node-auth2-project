@@ -3,9 +3,7 @@ const {findBy} = require("../users/users-model")
 const jwt = require("jsonwebtoken")
 
 const restricted = (req, res, next) => {
-  
-
-  /*const token = req.headers.authorization
+  const token = req.headers.authorization
   if (!token) {
     return next({
       status: 401,
@@ -18,10 +16,11 @@ const restricted = (req, res, next) => {
         status: 401,
         message: "Token invalid"
       })
+    } else {
+      req.decodedToken = decodedToken
+      next()
     }
-    req.decodedJwt = decodedToken
-    next()
-  })*/
+  })
 
 
   /*
